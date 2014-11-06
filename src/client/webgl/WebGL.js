@@ -23,6 +23,9 @@
 
 		this.lights = [];
 		this.addLights();
+		
+		//hack: call land adding, now that the scene is created:
+		var land = new VIZI.Land();
 
 		return Q.fcall(function() {});
 	};

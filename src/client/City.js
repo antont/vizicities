@@ -310,7 +310,7 @@
 		var startTime = Date.now();
 
 		// Set up core components
-		this.floor = new VIZI.Floor();
+		//this.floor = new VIZI.Floor();
 
 		VIZI.Log("Finished loading core objects in " + (Date.now() - startTime) + "ms");
 
