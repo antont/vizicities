@@ -10,10 +10,11 @@
 			// Given radius of earth is 6378137 meters
 			// (2 * Math.PI / 360) * 6378137 = 111319.49079327357
 			// From: http://stackoverflow.com/a/7478827/997339
-			this.metersPerLat = 111319.49;
+			//this.metersPerLat = 111319.49; //original - London?
+			this.metersPerLat = 111492.76; //Oulu
 
-			this.tileSize = 256;
-			this.tileZoom = 15;
+			this.tileSize = 300;
+			this.tileZoom = 14;
 
 			this.projection = this.setProjection(options.center);
 
