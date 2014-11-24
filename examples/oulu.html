@@ -1,0 +1,76 @@
+<!DOCTYPE html5>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ViziCities Demo</title>
+
+  <link href="reset.css" rel="stylesheet" type="text/css">
+
+  <link href="../css/vizicities.css" rel="stylesheet" type="text/css">
+  <link href="../css/loading.css" rel="stylesheet" type="text/css">
+  
+  <style type="text/css">
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      background: #ccc;
+    }
+
+    #heatmapContainerWrapper { width:100%; height:100%; position:absolute; background:rgba(0,0,0,.1); }
+    #heatmapContainer { width:100%; height:100%;}
+  </style>
+</head>
+<body>
+  <div id="vizicities-container"></div>
+
+  <div id="heatmapContainerWrapper">
+      <div id="heatmapContainer">
+      </div>
+  </div>
+
+  <script src="../build/vizi.js"></script>
+  
+<!-- POI -->
+<script src="../src/client/poi/jquery-1.9.1.js"></script>
+<script src="../src/client/poi/jquery-ui.js"></script>
+<link rel=stylesheet href="../css/jquery-ui.css" />
+<link rel=stylesheet href="../css/info.css"/>
+<!--     -->
+
+  <script src="heatmap.min.js"></script>
+  <script src="threejs_heatmap.js"></script>
+
+   <script src="js/Mirror.js"></script>
+   <script src="js/WaterShader.js"></script>
+
+  <script>
+    // Debug output
+    VIZI.DEBUG = false;
+
+    VIZI.ENABLE_OUTLINES = false;
+    VIZI.ENABLE_ROADS = true;
+
+    var city = new VIZI.City();
+    city.init({
+      
+      // coords: [-0.01924, 51.50358], // Canary Wharf
+      // coords: [25.24342,65.13290], // Virpiniemi Golf
+      //coords: [25.479259499999998, 65.0164696], // Oulu
+      coords: [25.483823771794608, 65.01245251563068], // Oulu2 -- 65.01245251563068,25.483823771794608
+      // coords: [2.2136, 41.3908], // Barcelona
+      //coords: [-3.800011, 43.462051], // Sensors
+      // coords: [-3.80882, 43.46323], // sensor 357 (node/id)
+      domElement: document.getElementById("vizicities-container"),
+      overpassGridUpdate: true,
+      capZoom: false
+    });
+
+  </script>
+
+</body>
+</html>
+

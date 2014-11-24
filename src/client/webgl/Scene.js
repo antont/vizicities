@@ -22,7 +22,7 @@ var trees;
 var lightbulb;
 var thermometer;
 var testest;
-var treeLimit = 1200; // 1200
+var treeLimit = 3; // 1200
 var treeAmount = 0;
 var globalMaterial = new THREE.MeshLambertMaterial({
 	vertexColors: THREE.VertexColors,
